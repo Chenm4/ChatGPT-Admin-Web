@@ -334,16 +334,16 @@ export function Chat() {
                   }}
               />
 
-              <div className={styles["window-action-button"]}>
-                <IconButton
-                    icon={<ExportIcon />}
-                    bordered
-                    title={Locale.Chat.Actions.Export}
-                    onClick={() => {
-                      window.location.href = "https://www.baidu.com";
-                    }}
-                />
-              </div>
+            <div className={styles["window-action-button"]}>
+              <IconButton
+                  icon={<ExportIcon />}
+                  bordered
+                  title={Locale.Chat.Actions.Export}
+                  onClick={() => {
+                    window.location.href = "https://www.baidu.com";
+                  }}
+              />
+            </div>
 
             </div>
         </div>
