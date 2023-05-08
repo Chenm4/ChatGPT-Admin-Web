@@ -328,7 +328,7 @@ export function Chat() {
             <IconButton
                 icon={<ExportIcon />}
                 bordered
-                title={Locale.Chat.Actions.Export}
+                title={Locale.Chat.Actions.Facebook}
                 onClick={() => {
                   window.location.href = "https://www.baidu.com";
                 }}
