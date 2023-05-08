@@ -45,7 +45,7 @@ const en: LocaleType = {
       ChatList: "Go To Chat List",
       CompressedHistory: "Compressed History Memory Prompt",
       Export: "Export All Messages as Markdown",
-      Facebook:"open author Facebook",
+      blog:"open author blog",
       Copy: "Copy",
       Stop: "Stop",
       Retry: "Retry",

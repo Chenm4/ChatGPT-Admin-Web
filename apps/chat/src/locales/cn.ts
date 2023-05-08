@@ -42,7 +42,7 @@ const cn = {
       Copy: "复制",
       Stop: "停止",
       Retry: "重试",
-      Facebook:"打开作者Facebook",
+      blog:"打开作者blog",
     },
     Typing: "正在输入…",
     Input: (submitKey: string) => `输入消息，${submitKey} 发送`,

@@ -18,6 +18,7 @@ import Locale from "@/locales";
 import MenuIcon from "@/assets/icons/menu.svg";
 import BrainIcon from "@/assets/icons/brain.svg";
 import ExportIcon from "@/assets/icons/export.svg";
+import BlogIcon from "@/assets/icons/blog.svg";
 import LoadingIcon from "@/assets/icons/three-dots.svg";
 import SendWhiteIcon from "@/assets/icons/send-white.svg";
 import CopyIcon from "@/assets/icons/copy.svg";
@@ -326,11 +327,11 @@ export function Chat() {
           </div>
           <div className={styles["window-action-button"]}>
             <IconButton
-                icon={<ExportIcon />}
+                icon={<BlogIcon />}
                 bordered
-                title={Locale.Chat.Actions.Facebook}
+                title={Locale.Chat.Actions.blog}
                 onClick={() => {
-                  window.location.href = "https://www.baidu.com";
+                  window.location.href = "https://www.zhaoshengmu.top";
                 }}
             />
           </div>
