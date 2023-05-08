@@ -323,7 +323,29 @@ export function Chat() {
                 exportMessages(session.messages, session.topic);
               }}
             />
-          </div>
+
+            <div className={styles["window-action-button"]}>
+              <IconButton
+                  icon={<ExportIcon />}
+                  bordered
+                  title={Locale.Chat.Actions.Export}
+                  onClick={() => {
+                    exportMessages(session.messages, session.topic);
+                  }}
+              />
+
+              <div className={styles["window-action-button"]}>
+                <IconButton
+                    icon={<ExportIcon />}
+                    bordered
+                    title={Locale.Chat.Actions.Export}
+                    onClick={() => {
+                      window.location.href = "https://www.baidu.com";
+                    }}
+                />
+              </div>
+
+            </div>
         </div>
       </div>
 

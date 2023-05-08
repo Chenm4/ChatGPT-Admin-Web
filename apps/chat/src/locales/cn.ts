@@ -1,5 +1,5 @@
 const title = process.env.NEXT_PUBLIC_TITLE;
-
+//本目录就是为了切换中英文方便来实现的，
 const cn = {
   Index: {
     Title: title || "ChatGPT Admin",
@@ -42,6 +42,7 @@ const cn = {
       Copy: "复制",
       Stop: "停止",
       Retry: "重试",
+      Facebook:"打开作者Facebook",
     },
     Typing: "正在输入…",
     Input: (submitKey: string) => `输入消息，${submitKey} 发送`,
@@ -167,7 +168,7 @@ const cn = {
     Failed: "复制失败，请赋予剪切板权限",
   },
 };
-
+//定义了一个名为 LocaleType 的类型别名，它的值等于 typeof cn。这里的 typeof 是 TypeScript 的类型操作符，表示获取 cn 对象的类型。
 export type LocaleType = typeof cn;
 
 export default cn;
