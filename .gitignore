@@ -9,5 +9,5 @@
 **/dist/
 # Turbopack
 .turbo
-
+.env
 **/node_modules/
