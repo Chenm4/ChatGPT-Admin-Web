@@ -16,6 +16,11 @@ import { showToast } from "@/components/ui-lib";
 type PlanType = "Free" | "Pro" | "Premium";
 type PaymentCycleType = "yearly" | "monthly" | "quarterly";
 
+//定义 Price 接口的作用是为了规定 Price 对象必须具备哪些属性和属性值的类型，以便在编写代码时可以对 Price 对象进行类型检查，避免因类型错误而导致的运行时错误。
+// 通过定义 Price 接口，可以保证每个 Price 对象都具有相同的属性，从而更加稳定可靠。
+//
+// 如果不定义 Price 接口，可能会在代码编写过程中出现未定义的属性或类型错误等问题，导致代码无法正常运行。
+// 而通过定义 Price 接口，可以提高代码的可读性和可维护性，并降低开发者在编写代码时犯错的风险。
 interface Price {
   name: PlanType;
   description?: string;
@@ -66,6 +71,8 @@ function PricingItem(props: {
   cycle: PaymentCycleType;
   price: Price;
 }) {
+  //type PlanType = "Free" | "Pro" | "Premium";
+  // type PaymentCycleType = "yearly" | "monthly" | "quarterly";
   async function handleUpgrade(plan: PlanType, cycle: PaymentCycleType) {
     const req = await (
       await fetcher(`/api/user/pay?plan=${plan.toLowerCase()}&cycle=${cycle}`, {

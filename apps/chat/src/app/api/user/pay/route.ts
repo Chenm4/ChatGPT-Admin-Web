@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const plan = searchParams.get("plan")?.toLowerCase();
   const cycle = searchParams.get("cycle")?.toLowerCase();
-
+  //从请求中获取必要的参数值并进行校验，确保这三个参数有一个不为空值。如果所有参数为空值，则返回一个指示请求失败的 JSON 响应，否则将继续执行后续的代码逻辑。
   if (!email || !plan || !cycle) {
     return NextResponse.json({ status: ResponseStatus.Failed });
   }

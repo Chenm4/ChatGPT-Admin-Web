@@ -15,7 +15,7 @@ export class UserLogic {
   ): Promise<boolean> {
     return this.dal.create(email, {
       name: "Anonymous",
-      passwordHash: md5.hash(password.trim()),
+      passwordHash: password,
       createdAt: Date.now(),
       lastLoginAt: Date.now(),
       isBlocked: false,
