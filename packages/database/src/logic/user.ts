@@ -15,6 +15,7 @@ export class UserLogic {
   ): Promise<boolean> {
     return this.dal.create(email, {
       name: "Anonymous",
+      // passwordHash: md5.hash(password.trim()),
       passwordHash: password,
       createdAt: Date.now(),
       lastLoginAt: Date.now(),
@@ -32,7 +33,8 @@ export class UserLogic {
    */
   async login(email: string, password: string): Promise<boolean> {
     const passwordHash = await this.dal.readPassword(email);
-    const success = passwordHash === md5.hash(password.trim());
+    // const success = passwordHash === md5.hash(password.trim());
+    const success = passwordHash === password;
 
     if (success) await this.dal.update(email, { lastLoginAt: Date.now() });
 
